@@ -7,16 +7,18 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ComparisonToolTest extends BaseTest {
+class ComparisonToolTest extends BaseTest {
+
+  private ComparisonToolPage comparisonToolPage;
 
   @BeforeEach
   void navigateToURL() {
+    comparisonToolPage = new ComparisonToolPage(driver);
     open("https://www.landrover.co.uk/comparison-tool/index.html");
   }
 
   @Test
   void ensureComparisonToolLoads() {
-    ComparisonToolPage comparisonToolPage = new ComparisonToolPage(driver);
     assertTrue(comparisonToolPage.isInitialized());
   }
 }

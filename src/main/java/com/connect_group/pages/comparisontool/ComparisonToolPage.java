@@ -7,14 +7,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class ComparisonToolPage extends BasePage {
 
-  @FindBy(css = ".headerBox__heroTitle")
-  private WebElement heroTitle;
+  @FindBy(css = ".vehicles-slider")
+  private WebElement vehicleSlider;
 
   public ComparisonToolPage(WebDriver driver) {
     super(driver);
   }
 
   public boolean isInitialized() {
-    return heroTitle.isDisplayed();
+    return vehicleSlider.isDisplayed();
   }
 }
