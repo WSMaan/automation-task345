@@ -23,6 +23,8 @@ Additional information - https://www.pluralsight.com/guides/getting-started-with
 
 ## Tasks
 
-1.  First task
-2.  Second task
-3.  Third task
+Below are a number of tasks which related to the Comparison Tool which can be found on landrover.co.uk
+
+1. Ensure that 6 vehicles are displayed on the "01 Vehicles" step of the comparison tool.
+2. Move to and click on the out of view "Discovery Sport" vehicle.
+3. After clicking on a vehicle from the "01 Vehicles" step. Ensure user is navigated to the "02 Models" step, but can return back by clicking on the "01 Vehicles" step indicator.
