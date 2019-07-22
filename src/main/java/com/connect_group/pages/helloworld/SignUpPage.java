@@ -1,4 +1,4 @@
-package com.connect_group.pages.helloWorld;
+package com.connect_group.pages.helloworld;
 
 import com.connect_group.BasePage;
 import org.openqa.selenium.WebDriver;

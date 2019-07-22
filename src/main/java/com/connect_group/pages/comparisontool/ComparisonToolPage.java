@@ -1,4 +1,4 @@
-package com.connect_group.pages.comparisonTool;
+package com.connect_group.pages.comparisontool;
 
 import com.connect_group.BasePage;
 import org.openqa.selenium.WebDriver;

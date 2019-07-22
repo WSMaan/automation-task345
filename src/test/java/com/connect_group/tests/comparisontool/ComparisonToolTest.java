@@ -1,13 +1,13 @@
-package com.connect_group.tests.comparisonTool;
+package com.connect_group.tests.comparisontool;
 
 import com.connect_group.BaseTest;
-import com.connect_group.pages.comparisonTool.ComparisonToolPage;
+import com.connect_group.pages.comparisontool.ComparisonToolPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class ComparisonTool extends BaseTest {
+public class ComparisonToolTest extends BaseTest {
 
   @BeforeEach
   void navigateToURL() {

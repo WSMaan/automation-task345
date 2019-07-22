@@ -1,15 +1,15 @@
-package com.connect_group.tests.helloWorld;
+package com.connect_group.tests.helloworld;
 
 import com.connect_group.BaseTest;
 
-import com.connect_group.pages.helloWorld.ReceiptPage;
-import com.connect_group.pages.helloWorld.SignUpPage;
+import com.connect_group.pages.helloworld.ReceiptPage;
+import com.connect_group.pages.helloworld.SignUpPage;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class HelloWorld extends BaseTest {
+class HelloWorldTest extends BaseTest {
 
   @BeforeEach
   void navigateToURL() {
