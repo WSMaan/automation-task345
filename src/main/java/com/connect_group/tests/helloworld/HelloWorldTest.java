@@ -1,6 +1,6 @@
 package com.connect_group.tests.helloworld;
 
-import com.connect_group.BaseTest;
+import com.connect_group.tests.BaseTest;
 
 import com.connect_group.pages.helloworld.ReceiptPage;
 import com.connect_group.pages.helloworld.SignUpPage;

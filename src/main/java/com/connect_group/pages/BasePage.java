@@ -1,4 +1,4 @@
-package com.connect_group;
+package com.connect_group.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

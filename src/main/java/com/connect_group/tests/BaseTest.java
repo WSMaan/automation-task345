@@ -1,8 +1,9 @@
-package com.connect_group;
+package com.connect_group.tests;
 
 import com.connect_group.project_config.ScreenShotService;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import java.util.logging.Logger;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
