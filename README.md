@@ -7,7 +7,7 @@
 Below are a number of tasks which related to the Comparison Tool which can be found on [https://www.landrover.co.uk/comparison-tool/index.html](https://www.landrover.co.uk/comparison-tool/index.html)
 
 1. Test 1 | Check that the expected number of vehicles are displayed on the "01 Vehicles" step of the comparison tool (7 at the time of writing).
-2. Test 2 | Move to and click on the out of view "Range Rover Velar" vehicle.
+2. Test 2 | Move to and click on the out of view vehicle ("New Defender" is out of view at the time of writing)
 3. Test 3 | After clicking on a vehicle from the "01 Vehicles" step. Ensure user is navigated to the "02 Models" step, but can return back by clicking on the "01 Vehicles" step indicator.
 4. Test 4 | Ensure that 2 options are displayed for the "Long Wheelbase" body style after clicking on the "Range Rover" vehicle on the "01 Vehicles" step.
 5. Test 5 | Selecting vehicle options, move through each step ensuring that the final vehicle is displayed within the compare vehicle table.
