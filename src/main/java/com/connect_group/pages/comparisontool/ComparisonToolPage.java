@@ -17,4 +17,6 @@ public class ComparisonToolPage extends BasePage {
   public boolean isInitialized() {
     return vehicleSlider.isDisplayed();
   }
+
+  // TODO: Include any code needed to support the new tests added within ComparisonToolTest
 }
