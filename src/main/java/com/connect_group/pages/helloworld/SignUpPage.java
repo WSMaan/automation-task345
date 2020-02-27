@@ -27,6 +27,7 @@ public class SignUpPage extends BasePage {
   }
 
   public boolean isInitialized() {
+    waitForElementToAppear(firstName);
     return firstName.isDisplayed();
   }
 

@@ -15,6 +15,7 @@ public class ComparisonToolPage extends BasePage {
   }
 
   public boolean isInitialized() {
+    waitForElementToAppear(vehicleSlider);
     return vehicleSlider.isDisplayed();
   }
 
