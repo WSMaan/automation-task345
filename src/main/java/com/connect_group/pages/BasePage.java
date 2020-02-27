@@ -2,6 +2,7 @@ package com.connect_group.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -38,8 +39,16 @@ public class BasePage {
     wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
   }
 
+  protected void waitForElementToAppear(WebElement element) {
+    wait.until(ExpectedConditions.visibilityOf(element));
+  }
+
   protected void waitForElementToDisappear(By locator) {
     wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
+  }
+
+  protected void waitForElementToDisappear(WebElement element) {
+    wait.until(ExpectedConditions.invisibilityOf(element));
   }
 
   protected void waitForTextToDisappear(By locator, String text) {
