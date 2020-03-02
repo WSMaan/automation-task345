@@ -1,16 +1,16 @@
 package com.connect_group.tests;
 
 import com.connect_group.project_config.ScreenShotService;
-import java.util.logging.Logger;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
+import java.util.logging.Logger;
 
 public class BaseTest {
 
@@ -19,7 +19,7 @@ public class BaseTest {
   @RegisterExtension
   protected ScreenShotService screenShotService = new ScreenShotService(this::getDriver);
 
-  protected WebDriver driver;
+  protected static WebDriver driver;
 
   private WebDriver getDriver() {
     return driver;
@@ -33,22 +33,24 @@ public class BaseTest {
   @BeforeAll
   public static void beforeSuite() {
     WebDriverManager.chromedriver().setup();
-  }
 
-  @BeforeEach
-  public void startBrowser() {
     driver = new ChromeDriver(getChromeOptions());
     driver.manage().window().maximize();
   }
 
-  private ChromeOptions getChromeOptions() {
-    return new ChromeOptions().setHeadless(false);
+  @AfterEach
+  public void cleanUp() {
+    driver.manage().deleteAllCookies();
   }
 
-  @AfterEach
-  public void afterSuite() {
+  @AfterAll
+  public static void tearDown() {
     if (driver != null) {
       driver.quit();
     }
+  }
+
+  protected static ChromeOptions getChromeOptions() {
+    return new ChromeOptions().setHeadless(false);
   }
 }

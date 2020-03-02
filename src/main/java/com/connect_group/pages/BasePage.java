@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 public class BasePage {
@@ -19,7 +20,10 @@ public class BasePage {
 
   public BasePage(WebDriver driver) {
     this.driver = driver;
+
+    driver.manage().timeouts().implicitlyWait(TIMEOUT, TimeUnit.SECONDS);
     wait = new WebDriverWait(driver, TIMEOUT, POLLING);
+
     PageFactory.initElements(driver, this);
   }
 
