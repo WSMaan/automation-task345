@@ -1,54 +1,58 @@
 package com.connect_group.pages.helloworld;
 
 import com.connect_group.pages.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 public class SignUpPage extends BasePage {
 
-  @FindBy(id = "firstname")
-  private WebElement firstName;
+  private WebElement getFirstName() {
+    return getDriver().findElement(By.id("firstname"));
+  }
 
-  @FindBy(id = "lastname")
-  private WebElement lastName;
+  private WebElement getLastName() {
+    return getDriver().findElement(By.id("lastname"));
+  }
 
-  @FindBy(id = "address")
-  private WebElement address;
+  private WebElement getAddress() {
+    return getDriver().findElement(By.id("address"));
+  }
 
-  @FindBy(id = "zipcode")
-  private WebElement zipCode;
+  private WebElement getZipCode() {
+    return getDriver().findElement(By.id("zipcode"));
+  }
 
-  @FindBy(id = "signup")
-  private WebElement submitButton;
+  private WebElement getSubmitButton() {
+    return getDriver().findElement(By.id("signup"));
+  }
 
   public SignUpPage(WebDriver driver) {
     super(driver);
   }
 
   public boolean isInitialized() {
-    waitForElementToAppear(firstName);
-    return firstName.isDisplayed();
+    return getFirstName().isDisplayed();
   }
 
   public void enterName(String firstName, String lastName) {
-    this.firstName.clear();
-    this.firstName.sendKeys(firstName);
+    getFirstName().clear();
+    getFirstName().sendKeys(firstName);
 
-    this.lastName.clear();
-    this.lastName.sendKeys(lastName);
+    getLastName().clear();
+    getLastName().sendKeys(lastName);
   }
 
   public void enterAddress(String address, String zipCode) {
-    this.address.clear();
-    this.address.sendKeys(address);
+    getAddress().clear();
+    getAddress().sendKeys(address);
 
-    this.zipCode.clear();
-    this.zipCode.sendKeys(zipCode);
+    getZipCode().clear();
+    getZipCode().sendKeys(zipCode);
   }
 
   public ReceiptPage submit() {
-    submitButton.click();
+    getSubmitButton().click();
     return new ReceiptPage(driver);
   }
 }
