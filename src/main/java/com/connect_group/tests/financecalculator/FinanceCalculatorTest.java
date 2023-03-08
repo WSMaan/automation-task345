@@ -7,6 +7,9 @@ import com.connect_group.tests.BaseTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class FinanceCalculatorTest extends BaseTest {
@@ -27,6 +30,10 @@ class FinanceCalculatorTest extends BaseTest {
   @Test
   void ensureModelSelectPageIsPresent() {
     assertTrue(modelSelectPage.isInitialized());
+  }
+  @Test
+  void checkCount(){
+    assertTrue(modelSelectPage.getAllNameplates()==7);
   }
 
   // TODO: Complete the each of the tests under the "Tasks to Complete" section of the README.md
